@@ -1,6 +1,6 @@
 # Realtime CDC Pipeline: PostgreSQL → Debezium → Kafka → ClickHouse
 
-Учебный проект по построению near real-time CDC (Change Data Capture) pipeline. Изменения в PostgreSQL автоматически захватываются Debezium из WAL, передаются в Apache Kafka и загружаются в ClickHouse для дальнейшей аналитики.
+Проект по построению near real-time CDC (Change Data Capture) pipeline. Изменения в PostgreSQL автоматически захватываются Debezium из WAL, передаются в Apache Kafka и загружаются в ClickHouse для дальнейшей аналитики.
 
 В проекте реализованы:
 - начальная загрузка данных (initial snapshot);
