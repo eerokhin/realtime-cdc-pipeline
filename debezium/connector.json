@@ -1,0 +1,26 @@
+{
+  "name": "postgres-cdc-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "__POSTGRES_PASSWORD__",
+    "database.dbname": "shop",
+
+    "topic.prefix": "shop",
+
+    "plugin.name": "pgoutput",
+    "decimal.handling.mode": "string",
+    "slot.name": "shop_cdc_slot",
+    "publication.name": "shop_publication",
+    "publication.autocreate.mode": "filtered",
+
+    "schema.include.list": "public",
+    "table.include.list": "public.customers,public.orders",
+
+    "snapshot.mode": "initial"
+  }
+}
